@@ -1,0 +1,35 @@
+defaults: &defaults
+  access_id: "summon"
+  secret_key: "your secret key here"
+  client_key: "your client key here"
+  api_base: "http://api.summon.serialssolutions.com/2.0.0/search?"
+  loaded_link_base: "http://<your_institution_here>.summon.serialssolutions.com/search?"
+  services: [spelling_suggestion, related_topics, topic_snippet]
+
+  filters:
+    - 'ContentType,Journal Article,f'
+    - 'ContentType,Magazine Article,f'
+    - 'ContentType,Book Chapter,f'
+    - 'ContentType,Trade Publication Article,f'
+    - 'ContentType,Journal / eJournal,f'
+    - 'Language,English,f'
+    - 'IsFullText,true,f'
+
+  commands:
+    - 'addFacetValueFilters(ContentType,Journal Article,Journal / eJournal,Book Chapter,Magazine Article,Trade Publication Article)'
+    - 'addFacetValueFilters(Language,English)'
+    - 'addFacetValueFilters(IsFullText,true)'
+    - 'setHoldingsOnly(true)'
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+staging:
+  <<: *defaults
+
+production:
+  <<: *defaults
+

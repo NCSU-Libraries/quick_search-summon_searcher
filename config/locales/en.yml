@@ -1,0 +1,11 @@
+en:
+  summon_search:
+    display_name: "Articles"
+    short_display_name: "article"
+    search_form_placeholder: "Search for articles and book chapters"
+    module_callout: "Search Summon for articles and book chapters."
+    error_service_message: "searching Summon"
+    no_results_service_message: "a different search for articles"
+    loaded_link: "https://<institution>.summon.serialssolutions.com/#!/search?fvf=ContentType,Journal%20Article,f%7CContentType,Magazine%20Article,f%7CContentType,Book%20Chapter,f%7CContentType,Trade%20Publication%20Article,f%7CContentType,Journal%20%2F%20eJournal,f%7CLanguage,English,f&l=en&q="
+    no_results_link: "http://<institution>.summon.serialssolutions.com/"
+
