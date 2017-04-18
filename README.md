@@ -29,7 +29,7 @@ Run bundle install:
 
     bundle install
 
-Include in your Search Results page (point to theme docs here for more info about this)
+Include in your Search Results page
 
      <%= render_module @summon, 'summon' %>
 
