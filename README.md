@@ -15,9 +15,23 @@ These services can be enabled / disabled by adding / removing them from the "ser
 > Note: This gem was extracted from NCSU Libraries' implementation of QuickSearch, and although some aspects have been made configurable, there may be still be some assumptions baked into the searcher. Issues or pull requests are welcome if you run into this situation.
 
 
-## Usage
+## Installation
 
-To use, add 'quick_search-summon_searcher' to your QuickSearch Gemfile, add the searcher to quick_search_config.yml, and add a render_module call into the app/views/search/index.html.erb results page.
+Include the searcher gem in your Gemfile:
+
+    gem 'quick_search-arxiv_searcher'
+
+Include as a searcher in your config/quick_search_config.yml:
+
+    searchers = [summon, ..., some_searcher]
+
+Run bundle install:
+
+    bundle install
+
+Include in your Search Results page (point to theme docs here for more info about this)
+
+     <%= render_module @summon, 'summon' %>
 
 For more general information about setting up searcher plugins in QuickSearch, see https://github.com/NCSU-Libraries/quick_search
 
