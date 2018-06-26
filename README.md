@@ -19,7 +19,7 @@ These services can be enabled / disabled by adding / removing them from the "ser
 
 Include the searcher gem in your Gemfile:
 
-    gem 'quick_search-arxiv_searcher'
+    gem 'quick_search-summon_searcher'
 
 Include as a searcher in your config/quick_search_config.yml:
 
