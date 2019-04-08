@@ -21,6 +21,8 @@ defaults: &defaults
     - 'addFacetValueFilters(IsFullText,true)'
     - 'setHoldingsOnly(true)'
 
+  show_thumbnails: false
+
 development:
   <<: *defaults
 

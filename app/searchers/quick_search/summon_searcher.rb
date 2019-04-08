@@ -29,7 +29,11 @@ module QuickSearch
           result.issue = issue(value)
           result.pages = pages(value)
           result.fulltext = fulltext(value)
-          result.thumbnail = thumbnail(value)
+
+          if QuickSearch::Engine::SUMMON_CONFIG['show_thumbnails']
+            result.thumbnail = thumbnail(value)
+          end
+
           @results_list << result
         end
         @results_list
