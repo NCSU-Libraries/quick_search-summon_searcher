@@ -98,6 +98,7 @@ module QuickSearch
 
     def api_parameters
       api_parameters = {
+        's.include.ft.matches' =>'f',
         's.cmd' => commands.join(' '),
         's.light' => 'true',
         's.pn' => '1',
