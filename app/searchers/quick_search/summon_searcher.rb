@@ -154,8 +154,10 @@ module QuickSearch
       authors = ''
         if value['Author_xml']
           value['Author_xml'].each do |author|
-            authors << author['fullname'] if value['Author_xml']
-            authors << '; '
+            if value['Author_xml'] && author['fullname']
+              authors << author['fullname']
+              authors << '; '
+            end
         end
       end
       authors.chomp('; ')
